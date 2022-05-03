@@ -1,0 +1,22 @@
+@mixin flexc1 {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexc2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexcw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+@mixin flexff {
+    display: flex;
+    flex-flow: row wrap;
+}

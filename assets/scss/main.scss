@@ -1,0 +1,106 @@
+@import '_generals.scss';
+@import '_textstyles';
+@import '_variables';
+
+.header {
+    height: 6rem;
+    text-align: center;
+    font-family: $luc;
+    padding: 1.5rem;
+
+    h1,
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+.nav_links {
+    margin-top: 1rem;
+    @include flexc1;
+    margin-bottom: 1rem;
+    background-color: $bg1;
+
+    li {
+        padding: 1rem;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: $ari;
+        }
+    }
+}
+
+.main {
+    @include flexcw;
+
+    .section_text>h3 {
+        text-align: center;
+    }
+
+    .section_text,
+    .section_images {
+        margin: 1rem;
+    }
+
+    .section_images {
+        @include flexcw;
+    }
+
+    img {
+        height: 12rem;
+        width: 18rem;
+        margin: 0 0.5rem 1rem 0.5rem;
+    }
+
+    .aside {
+        @include flexc1;
+        flex-flow: column nowrap;
+        margin: 1rem;
+    }
+
+    .first_aside,
+    .second_aside,
+    .third_aside,
+    .fourth_aside {
+        border: 0.2rem solid $bg2_bd;
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+    }
+}
+
+.footer {
+    height: 5rem;
+    margin-top: 1rem;
+    background-color: $bg2_bd;
+
+    &_links {
+        @include flexc1;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .section_images {
+        @include flexff;
+    }
+
+    .section_text {
+        width: 70%;
+    }
+
+    .aside {
+        @include flexff;
+    }
+
+    .first_aside,
+    .second_aside,
+    .third_aside,
+    .fourth_aside {
+        width: 45%;
+        margin: 0.5rem;
+    }
+
+}
